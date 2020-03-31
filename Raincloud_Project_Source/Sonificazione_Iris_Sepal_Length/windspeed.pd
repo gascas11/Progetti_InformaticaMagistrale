@@ -1,0 +1,18 @@
+#N canvas 676 0 681 676 12;
+#X obj 194 312 osc~ 0.1;
+#X obj 194 357 +~ 1;
+#X obj 193 396 *~ 0.25;
+#N canvas 0 50 450 300 gust 0;
+#X restore 286 436 pd gust;
+#N canvas 0 50 450 300 squall 0;
+#X restore 362 435 pd squall;
+#X obj 270 468 +~;
+#X obj 244 504 +~;
+#X obj 241 573 outlet~;
+#X obj 242 539 clip~ 0 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
