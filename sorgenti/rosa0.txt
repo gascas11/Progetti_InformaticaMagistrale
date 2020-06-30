@@ -1,0 +1,45 @@
+{
+  "patologieJoin": [
+    {
+      "data_diagnosi": 2008,
+      "nome": "Diabete",
+      "_id": {
+        "$oid": "5efb03f781355c20b11ec771"
+      }
+    },
+    {
+      "data_diagnosi": 1990,
+      "nome": "Mal di gola",
+      "_id": {
+        "$oid": "5efb03f781355c20b11ec772"
+      }
+    },
+    {
+      "data_diagnosi": 1961,
+      "nome": "Ipertensione",
+      "_id": {
+        "$oid": "5efb03f781355c20b11ec773"
+      }
+    }
+  ],
+  "codice_fiscale": "AAABBB99C99DDDDB",
+  "cognome": "De Angelis",
+  "indirizzo": {
+    "CAP": "31970",
+    "via": "Via Gentile, 535",
+    "citta": "Borgo Gerlando ligure"
+  },
+  "data_nascita": "02/10/1951",
+  "nome": "Pietro",
+  "genere": "M",
+  "comportamentiJoin": [
+    {
+      "Sport": "Pugilato",
+      "Lavoro": "Manovale edile",
+      "Alimentazione": "semivegetarianismo",
+      "_id": {
+        "$oid": "5efb03f781355c20b11ec770"
+      }
+    }
+  ]
+}

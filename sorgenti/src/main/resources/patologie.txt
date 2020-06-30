@@ -1,0 +1,50 @@
+Anemia
+Asma
+Astigmatismo
+Bronchite
+Bradicardia
+Cefalea
+Celiachia
+Cistite
+Colica renale
+Congiuntivite
+Demenza senile
+Diabete
+Deviazione setto nasale
+Disturbo bipolare
+Discopatia
+Epatite
+Epilessia
+Ernia del disco
+Ernia cervicale
+Esofagite
+Fegato grasso
+Fibromialgia
+Fibrosi cistica
+Fratture ossee
+Gastrite
+Gengivite
+Gastroenterite
+Granuloma dentale
+Herpes
+Insonnia
+Influenza
+Ipertensione
+Leucemia
+Mal di gola
+Miopia
+Morbillo
+Mononucleosi
+Nevrosi
+Obesità
+Otite
+Pancreatite
+Piede piatto
+Polmonite
+Raffreddore
+Reumatismi
+Schizofrenia
+Strabismo
+Tonsilite
+Ustioni
+Varicella

@@ -1,0 +1,10 @@
+Magazziniere
+Addetto attività operative
+Bracciante giornaliero
+Impiegato amministrativo
+Autotrasportatore
+Meccanico manutentore
+Manovale edile
+Coltivatore diretto
+Autista
+Muratore

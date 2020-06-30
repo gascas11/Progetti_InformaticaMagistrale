@@ -1,0 +1,23 @@
+{
+  "Account": [
+    {
+      "password": "b09f5063d140dde7efbaa541c26a63ccfa37f83b7022df6058517d07dd697a7f",
+      "masterkey": "8dd9636589c04a96abd4b5cc5e277883",
+      "_id": {
+        "$oid": "5efb03f781355c20b11ec768"
+      },
+      "username": "rachele3",
+      "tipologia": "paziente"
+    }
+  ],
+  "codice_fiscale": "AAABBB99C99DDDDB",
+  "cognome": "Barone",
+  "indirizzo": {
+    "CAP": "88083",
+    "via": "Incrocio Emidio, 948",
+    "citta": "Costa terme"
+  },
+  "data_nascita": "06/04/1960",
+  "nome": "Rachele",
+  "genere": "F"
+}

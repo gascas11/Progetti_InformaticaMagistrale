@@ -1,0 +1,77 @@
+{
+  "patologieJoin": [
+    {
+      "data_diagnosi": 2016,
+      "nome": "Herpes",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec8fe"
+      }
+    },
+    {
+      "data_diagnosi": 2010,
+      "nome": "Fibromialgia",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec8ff"
+      }
+    },
+    {
+      "data_diagnosi": 2010,
+      "nome": "Diabete",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec900"
+      }
+    },
+    {
+      "data_diagnosi": 1995,
+      "nome": "Esofagite",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec901"
+      }
+    },
+    {
+      "data_diagnosi": 1994,
+      "nome": "Gastroenterite",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec902"
+      }
+    },
+    {
+      "data_diagnosi": 1985,
+      "nome": "Mononucleosi",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec903"
+      }
+    }
+  ],
+  "Account": [
+    {
+      "password": "aaff899f6d44e3ffe8c7d1b7e2dd0d7f8460aca6558468eb1041f4962138a713",
+      "masterkey": "c2195d872eaa42038fcbb728f64e348d",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec8fc"
+      },
+      "username": "cesare62",
+      "tipologia": "paziente"
+    }
+  ],
+  "codice_fiscale": "AAABBB99C99DDDDB",
+  "cognome": "Basile",
+  "indirizzo": {
+    "CAP": "62064",
+    "via": "Borgo Barbieri, 997",
+    "citta": "Caruso lido"
+  },
+  "data_nascita": "25/10/1979",
+  "nome": "Cesare",
+  "genere": "M",
+  "comportamentiJoin": [
+    {
+      "Sport": "Rugby",
+      "Lavoro": "Muratore",
+      "Alimentazione": "vegana",
+      "_id": {
+        "$oid": "5efb03f881355c20b11ec8fd"
+      }
+    }
+  ]
+}
