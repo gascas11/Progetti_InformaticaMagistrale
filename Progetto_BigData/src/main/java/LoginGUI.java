@@ -24,11 +24,11 @@ public class LoginGUI extends JFrame {
         this.masterKey = null;
 
         //creo i componenti grafici
-        initComponents();
+        createGuiComponents();
 
         //lister del bottone di login che al click prova a fare l'accesso
         btnLogin.addActionListener(e -> {
-            if(performSignIn(txtUsername.getText(), txtPassword.getText()) && this.username != null && this.id != null && this.type != null) {
+            if(checkSignIn(txtUsername.getText(), txtPassword.getText()) && this.username != null && this.id != null && this.type != null) {
                 dispose();
                 HomeGUI maingui = new HomeGUI(this.username, this.id, this.type, this.masterKey);
                 maingui.start();
@@ -41,8 +41,8 @@ public class LoginGUI extends JFrame {
 
     }
 
-    //metodo che disegna la UI
-    private void initComponents() {
+    //metodo che crea la GUI
+    private void createGuiComponents() {
         setTitle("Login Form");
         JPanel panel = new JPanel();
         JLabel lblTitle = new JLabel();
@@ -120,7 +120,7 @@ public class LoginGUI extends JFrame {
     }
 
     //metodo che dati username e password, restituisce true se il login va a buon fine
-    private boolean performSignIn(String usr, String pwd) {
+    private boolean checkSignIn(String usr, String pwd) {
         try {
             DBUtils conn = new DBUtils("localhost",
                     27017,

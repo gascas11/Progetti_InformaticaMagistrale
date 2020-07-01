@@ -31,10 +31,10 @@ public class HomeGUI extends JFrame{
         this.masterkey = Objects.requireNonNullElse(masterkey, "");
 
         //disegno il layout
-        initComponents();
+        createGuiComponents();
     }
 
-    private void initComponents() {
+    private void createGuiComponents() {
         setTitle("Area riservata");
         //setto la dimensione dinamicamente in base alla risoluzione del desktop
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
