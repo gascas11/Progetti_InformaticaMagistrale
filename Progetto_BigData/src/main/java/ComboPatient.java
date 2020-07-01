@@ -1,10 +1,10 @@
 //classe che permette di scegliere i pazienti dalla comboitem
-public class ComboItem {
+public class ComboPatient {
     private String name;
     private String id;
     private String masterkey;
 
-    public ComboItem(){
+    public ComboPatient(){
         this.name = "Nessuno";
         this.id = null;
     }

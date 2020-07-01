@@ -2,11 +2,11 @@ public class Main {
     public static void main(String[] args) {
         LoginGUI.main();
         //Main s = new Main();
-        //s.fillDatabase();
+        //s.loadDatabase();
     }
 
     //metodo usato per caricare i dati nel database
-    private void fillDatabase() {
+    private void loadDatabase() {
         try {
             DBUtils conn = new DBUtils("localhost",
                     27017,
@@ -14,9 +14,9 @@ public class Main {
                     "root",
                     "admin"
             );
-            conn.fillData(100);
-            conn.fillDoctorsAndAmministrative(5, "medico");
-            conn.fillDoctorsAndAmministrative(10, "amministrazione");
+            conn.getPatient(100);
+            conn.getDoctorsAndAmministrative(5, "medico");
+            conn.getDoctorsAndAmministrative(10, "amministrazione");
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();

@@ -24,7 +24,7 @@ public class DBUtils {
     }
 
     //metodo che genera personale amministrativo e medici
-    public void fillDoctorsAndAmministrative(int n, String type) {
+    public void getDoctorsAndAmministrative(int n, String type) {
         MongoDatabase database = client.getDatabase("myproject");
         MongoCollection<Document> collUtenti = database.getCollection("utenti");
 
@@ -46,7 +46,7 @@ public class DBUtils {
     }
 
     //metodo che genera i pazienti
-    public void fillData(int n){
+    public void getPatient(int n){
         MongoDatabase database = client.getDatabase("myproject");
 
         MongoCollection<Document> collAnagrafica = database.getCollection("anagrafiche");

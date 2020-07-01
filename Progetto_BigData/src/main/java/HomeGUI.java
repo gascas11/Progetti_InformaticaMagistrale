@@ -20,8 +20,8 @@ public class HomeGUI extends JFrame{
     private String type;
     private String masterkey;
     private JTextArea txtAreaInfo;
-    private JComboBox<ComboItem> cmbPazienti;
-    private ArrayList<ComboItem> pazienti;
+    private JComboBox<ComboPatient> cmbPazienti;
+    private ArrayList<ComboPatient> pazienti;
     private AnalizzatoreSpark sa;
 
     public HomeGUI(String username, String id, String type, String masterkey) {
@@ -73,7 +73,7 @@ public class HomeGUI extends JFrame{
             //ricevo tutti i paziente presenti nel database e li inserisco come elementi della combobox
             this.pazienti = selectAllPatients();
             cmbPazienti = new JComboBox<>();
-            for (ComboItem paziente : pazienti) {
+            for (ComboPatient paziente : pazienti) {
                 cmbPazienti.addItem(paziente);
             }
             //visualizzo il primo
@@ -81,7 +81,7 @@ public class HomeGUI extends JFrame{
             //se si aggiorna la combobox aggiorno anche lo script sparl
             cmbPazienti.addItemListener(itemEvent -> {
                 if (itemEvent.getStateChange() == ItemEvent.SELECTED) {
-                    ComboItem item = (ComboItem) itemEvent.getItem();
+                    ComboPatient item = (ComboPatient) itemEvent.getItem();
                     HomeGUI.this.id = item.getId();
                     sa = new AnalizzatoreSpark(id, type, item.getMasterkey());
                     txtAreaInfo.setText(sa.analize());
@@ -123,9 +123,9 @@ public class HomeGUI extends JFrame{
         }
 
         //lista di item filtrata, inizialmente vuota
-        ArrayList<ComboItem> filterArray= new ArrayList<>();
+        ArrayList<ComboPatient> filterArray= new ArrayList<>();
         //per ogni item riferito al cliente nela lista, se il testo contiene la stringa da ricercare, lo aggiunge all'array filtrato
-        for (ComboItem comboItem : pazienti) {
+        for (ComboPatient comboItem : pazienti) {
             if (comboItem.getName().toLowerCase().contains(enteredText.toLowerCase())) {
                 filterArray.add(comboItem);
             }
@@ -136,7 +136,7 @@ public class HomeGUI extends JFrame{
             //rimuovo dalla combobox tutti gli elementi, e riaggiungo quelli presenti nell'array filtrato
             DefaultComboBoxModel model = (DefaultComboBoxModel) cmbPazienti.getModel();
             model.removeAllElements();
-            for (ComboItem s: filterArray){
+            for (ComboPatient s: filterArray){
                 model.addElement(s);
             }
 
@@ -147,8 +147,8 @@ public class HomeGUI extends JFrame{
     }
 
     //metodo che prende dal database tutti i pazienti presenti
-    private ArrayList<ComboItem> selectAllPatients() {
-        ArrayList<ComboItem> allPatients = new ArrayList<>();
+    private ArrayList<ComboPatient> selectAllPatients() {
+        ArrayList<ComboPatient> allPatients = new ArrayList<>();
         DBUtils conn = null;
         try {
             //mi connetto al database
@@ -173,7 +173,7 @@ public class HomeGUI extends JFrame{
                     JSONObject accountId = obj.getJSONObject("account");
 
                     //creo l'item da inserire nella combobox relativo al paziente
-                    ComboItem item = new ComboItem();
+                    ComboPatient item = new ComboPatient();
                     item.setMasterkey(getMasterKey(db, new ObjectId(accountId.getString("$oid"))));
                     Cripto chiper = new Cripto(item.getMasterkey());
                     item.setName(chiper.decrypt(obj.getString("nome"))+" "+chiper.decrypt(obj.getString("cognome")));
