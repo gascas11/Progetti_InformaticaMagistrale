@@ -34,7 +34,7 @@ public class AnalizzatoreSpark {
         Logger.getLogger("org").setLevel(Level.ERROR);
         Logger.getLogger("akka").setLevel(Level.ERROR);
 
-        //creo la sessione spark
+        //avvio la sessione spark
         spark = SparkSession.builder()
                 .master("local")
                 .appName("MongoSparkConnectorIntro")

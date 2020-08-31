@@ -1,4 +1,4 @@
-//classe che permette di scegliere i pazienti dalla comboitem
+//classe che permette di scegliere i pazienti dalla combobox
 public class ComboPatient {
     private String name;
     private String id;
